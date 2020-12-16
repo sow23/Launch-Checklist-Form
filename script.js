@@ -52,7 +52,7 @@ window.addEventListener("load", function () {
 
          launchStatus.innerHTML = 'Awaiting Information Before Launch';
          launchStatus.style.color = "black";
-         items.style.visibility = 'hidden';
+         
 
 
       }
@@ -83,7 +83,7 @@ window.addEventListener("load", function () {
             fuelStatus.innerHTML = `Fuel Level too low for launch. It should be > 10000, it is:  ${fuelLevel}`;
             shuttleReady = false;
          }
-         if (Number(cargoMass) > 10000) {
+         if (Number(cargoMass) >= 10000) {
             cargoStatus.innerHTML = `Cargo Mass too heavy for lift-off. It should be < 10000, it is: ${cargoMass}`;
             shuttleReady = false;
          }
